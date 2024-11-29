@@ -1,0 +1,78 @@
+---
+title: "assignment_1"
+author: "BERT"
+date: "2024-09-19"
+output: html_document
+---
+
+```{R}
+animals <- c("Snake", "Ostrich", "Cat", "Spider")
+num_legs <- c(0, 2, 4, 8)
+animals_df <- data.frame(animals = animals, 
+                         num_legs = num_legs)
+print(animals_df)
+```
+
+```{R}
+x_vect <- seq(12, 2, -2)
+X <- matrix(x_vect, 2, 3)
+Y <- matrix(seq(4), 2, 2)
+Z <- matrix(seq(4, 10, 2), 2, 2)
+
+t(Y)
+t(Z)
+```
+
+## Commutative Operations
+"The order does not change the result."
+```{R}
+answer_1 <- Y + Z
+answer_2 <- Z + Y
+
+# answer_3 <- Y %*% Z
+# answer_4 <- Z %*% Y
+
+answer_5 <- Y %*% X
+
+asnwer_6 <- Y * Z
+answer_7 <- Z * Y
+```
+
+```{R}
+solve(Y)
+solve(Y) %*% X
+solve(Y, X)
+```
+
+## Function
+```{R}
+myFirstRFunc <- function(x) {
+    stopifnot(is.numeric(x),x%%1==0,x>=0)
+    answer <- 0
+    for (i in 1:x-1) {
+        if (i %% 2 == 0 | i %% 7 == 0) {
+            answer = answer + i
+        }
+    }
+    return (answer)
+}
+myFirstRFunc(1000)
+```
+
+## Plot
+```{R}
+x <- seq(0, 20, 0.01)
+y <- sin(x)
+sin_df <- data.frame(x = x, y = y)
+head(sin_df,3)
+plot(sin_df)
+```
+\[\sin(x)=\sum_{n=1}^{\infty}(-1)^{n+1}\cdot \frac{x^{2n-1}}{(2n-1)!}
+\approx x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}\ldots. \]
+
+## Git
+```{R}
+library(usethis) # Load the "usethis" R library
+use_git_config(user.name = "Robert", user.email = "kx24228@bristol.ac.uk")
+```
+
