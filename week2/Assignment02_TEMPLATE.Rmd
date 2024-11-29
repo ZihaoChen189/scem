@@ -1,0 +1,41 @@
+---
+title: "Assignment 2"
+author: "Insert My Name"
+date: "2024-09-25"
+output: html_document # you can change to other output format if you want
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 1. Data Wrangling
+
+
+## 1.1 (Q1)   
+
+<!-- Include your answers for each question under a second level heading eg ## 1.1 (Q1) -->
+**** insert your solutions here *****
+
+## 1.1 (Q2)   
+
+## 1.2 (Q1)
+
+
+
+....
+
+# 2. Random experiments, events and sample spaces, and the set theory
+
+....
+
+# 3. Probability theory
+
+## 3 (Q1)
+
+## 3 (Q2)
+
+.....
+
+
+
